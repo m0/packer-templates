@@ -22,9 +22,9 @@
       "guest_os_type": "Debian_64",
       "headless": true,
       "http_directory": "http",
-      "iso_checksum": "e7e9433973f082a297793c3c5010b2c5",
+      "iso_checksum": "8fdb6715228ea90faba58cb84644d296",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -96,7 +96,6 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
-            "scripts/puppet.sh",
             "scripts/cleanup.sh"
           ]
         },
@@ -105,7 +104,6 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/vmfusion.sh",
-            "scripts/puppet.sh",
             "scripts/cleanup.sh"
           ]
         }

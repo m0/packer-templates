@@ -1,9 +1,10 @@
-# Tech-Angels Packer templates
+# Packer templates
 
 ## Boxes description
 
-The current and only template was created for Debian 7.4.0 VM boxes, because this is the default environment at Tech-Angels.
-The boxes are "vanilla" with a minimal setup, 256MB RAM, 1 CPU. These settings can be easily changed in vagrant.
+The current and only template was adapted for Debian 7.5.0 VM boxes. It is based on the great wort by
+the people at Tech-Angels ( https://github.com/tech-angels/packer-templates ). The boxes are "vanilla" 
+with a minimal setup, 256MB RAM, 1 CPU. These settings can be easily changed in vagrant.
 
 ## Direct Download
 
@@ -29,25 +30,25 @@ $ brew install packer
 ## Build vagrant box
 
 ```bash
-$ packer build ta-debian-7-wheezy.json
+$ packer build debian-7-wheezy.json
 ```
 
 or optionnaly, select only one provider, for example ```vmware```:
 
 ```bash
-$ packer build -only vmware ta-debian-7-wheezy.json
+$ packer build -only vmware debian-7-wheezy.json
 ```
 
 ### Install your new box
 
 ```bash
-$ vagrant box add ta-debian-7-wheezy ./packer_vmware-iso_vmware.box
+$ vagrant box add debian-7-wheezy ./packer_vmware-iso_vmware.box
 ```
 
 or
 
 ```bash
-$ vagrant box add ta-debian-7-wheezy ./packer_virtualbox-iso_virtualbox.box
+$ vagrant box add debian-7-wheezy ./packer_virtualbox-iso_virtualbox.box
 ```
 
 The VM image has been imported to vagrant, it's now available on your system.
@@ -68,7 +69,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ta-debian-7-wheezy"
+  config.vm.box = "debian-7-wheezy"
 
   # Make ssh login secure
   # config.ssh.private_key_path = '~/.ssh/id_rsa'
@@ -101,8 +102,5 @@ $ echo ".vagrant" >> ~/.gitignore
 
 ## Credits
 
-  Many thanks to [Mitchell Hashimoto](https://github.com/mitchellh/) for his awesome work on [Packer](https://github.com/mitchellh/packer) and [Vagrant](https://github.com/mitchellh/vagrant).
-
-  Tech-Angels Inc. - http://www.tech-angels.com/
+  Many thanks to [Mitchell Hashimoto](https://github.com/mitchellh/) for his awesome work on [Packer](https://github.com/mitchellh/packer) and [Vagrant](https://github.com/mitchellh/vagrant) and to the people at Tech-Angels Inc. ( http://www.tech-angels.com ) for the initial template.
   
-  [![Tech-Angels](http://media.tumblr.com/tumblr_m5ay3bQiER1qa44ov.png)](http://www.tech-angels.com)
