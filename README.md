@@ -2,7 +2,7 @@
 
 ## Boxes description
 
-The current and only template was adapted for Debian 7.5.0 VM boxes. It is based on the great wort by
+The current and only template was adapted for Debian 7.5.0 VM boxes. It is based on the great work by
 the people at Tech-Angels ( https://github.com/tech-angels/packer-templates ). The boxes are "vanilla" 
 with a minimal setup, 256MB RAM, 1 CPU. These settings can be easily changed in vagrant.
 
